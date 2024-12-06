@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="icon" href="assets/nm-bg.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <div class="navbar-left">
+          <a href="index.html">
+            <img class="web-logo" src="assets/nm-bg.png" alt="webLogo" />
+          </a>
+          <ul class="navbar-links">
+            <li>
+              <a href="index.html" class="link-active">Home</a>
+            </li>
+            <li>
+              <a href="blog.html" class="link">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-right">
+          <a href="contact.html" class="contact-link">contact me</a>
+        </div>
+      </nav>
+    </div>
+
+    <main class="contact-section">
+      <form id="contactFrom" class="contact-froms">
+        <h1>Contact Me</h1>
+        <div class="from-field">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            class="from-input"
+            type="text"
+            required
+          />
+        </div>
+
+        <div class="from-field">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            class="from-input"
+            type="email"
+            required
+          />
+        </div>
+
+        <div class="from-field">
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            id="phoneNumber"
+            name="phoneNumber"
+            class="from-input"
+            type="number"
+            required
+          />
+        </div>
+
+        <div class="from-field">
+          <label for="subject">Subject</label>
+          <input
+            id="subject"
+            name="subject"
+            class="from-input"
+            type="text"
+            required
+          />
+        </div>
+
+        <div class="from-field">
+          <label for="skill">Sekill</label>
+          <select id="skill" name="skill" class="from-input" required>
+            <option value="frontend">FrontEnd</option>
+            <option value="backend">BackEnd</option>
+            <option value="fullstack">Fullstack</option>
+          </select>
+        </div>
+
+        <div class="from-field">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="massage" type="text" required>
+          </textarea>
+        </div>
+
+        <button class="from-submit-button" type="submit">submit</button>
+      </form>
+    </main>
+    <script src="submitFrom.js"></script>
+  </body>
+</html>

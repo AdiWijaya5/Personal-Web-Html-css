@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #7695ff;
+}
+
+/* NavBar Style */
+
+nav {
+  background-color: #ff9874;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.web-logo {
+  width: 60px;
+}
+
+.contact-link {
+  color: white;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.link-active {
+  color: orangered;
+  font-weight: bold;
+}
+
+.link {
+  color: black;
+}
+
+/* Home Style */
+
+.cotainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% 0;
+}
+.cotainer-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 10px 10px 5px lightblue;
+}
+.card-list {
+  flex: 50%;
+  padding: 20px;
+}
+.card-image {
+  flex: 30%;
+  padding: 20px;
+}
+.card-image-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-img {
+  width: 300px;
+  height: 450px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 6px 6px 5px rgb(122, 135, 139);
+  background-color: rgb(255, 255, 255);
+}
+.box-img {
+  width: 300px;
+  height: 70%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-btn-link {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+.button {
+  margin: 10px;
+  padding: 7px 32px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: #204e79;
+  border: none;
+  border-radius: 15px;
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: #ea1d6f;
+}
+
+h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h5 {
+  text-align: center;
+  font-family: Monospace, "Courier New", Courier, monospace;
+}
+p {
+  margin: 10px 0;
+  text-align: justify;
+}
+.icons {
+  display: flex;
+}
+.icons a {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  color: black;
+  background-color: white;
+  margin: 0 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+}
+.icons a:hover {
+  color: white;
+  transform: translate(0, 30px);
+  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.7);
+}
+.icons a:nth-child(1):hover {
+  background-color: #007bb5;
+}
+.icons a:nth-child(2):hover {
+  background-color: #3b5998;
+}
+.icons a:nth-child(3):hover {
+  background-color: #7232bd;
+}
+.icons a:nth-child(4):hover {
+  background-color: #00acee;
+}
+
+/* contact style */
+
+.contact-section {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contact-froms {
+  width: 500px;
+  border-radius: 10px;
+  /* border: 1px solid gray;
+  background-color: #ececec;
+  box-shadow: 10px 10px 5px lightblue; */
+}
+.contact-froms h1 {
+  text-align: center;
+}
+.from-field {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  font-family: "Nunito", sans-serif;
+  flex-direction: column;
+}
+.from-input {
+  border-radius: 4px;
+  border: 0;
+  font-size: 1rem;
+  border: 1px solid gray;
+  min-height: 30px;
+  background-color: #ececec;
+  padding: 5px;
+}
+textarea {
+  width: 100%;
+  min-height: 5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  float: left;
+  border: 1px solid gray;
+  background-color: #ececec;
+}
+.from-submit-button {
+  padding: 7px 35px;
+  border-radius: 60px;
+  background-color: #42474e;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  border: 1px solid rgb(58, 58, 61);
+}
+.from-submit-button:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+  .from-submit-button {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+/* blog style */
+
+.section-title {
+  text-align: center;
+}
+.blog-from {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  width: 500px;
+  justify-content: center;
+}
+.from-field-blog {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  font-family: "Nunito", sans-serif;
+  flex-direction: column;
+}
+.input-blog-image-grup {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.input-blog-image-grup label {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.form-container button {
+  margin-top: 30px;
+  padding: 8px 20px;
+  color: #ffffff;
+  background-color: orangered;
+  border: none;
+  border-radius: 5px;
+}
+.button-grup {
+  text-align: right;
+}
+hr {
+  width: 80%;
+}
+
+/* LIST Blog */
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.blog-list {
+  width: 80%;
+}
+
+.blog-list-item {
+  display: flex;
+  gap: 20px;
+  background-color: #d6e9f1;
+  border: 1px solid #c4c4c4;
+  box-shadow: 10px 10px 5px lightblue;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.blog-image {
+  flex: 1;
+}
+
+.blog-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.blog-content {
+  flex: 2;
+}
+
+.btn-group {
+  text-align: right;
+}
+
+.btn-edit {
+  padding: 8px 20px;
+  color: black;
+  background-color: #cacaca;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-post {
+  padding: 8px 20px;
+  color: white;
+  background-color: orangered;
+  border: none;
+  border-radius: 5px;
+}
+
+.blog-item-title {
+  text-decoration: none;
+}
+
+.blog-text {
+  margin: 0;
+}
