@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="icon" href="assets/nm-bg.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar-left">
+        <a href="index.html">
+          <img class="web-logo" src="assets/nm-bg.png" alt="web logo" />
+        </a>
+        <ul class="navbar-links">
+          <li>
+            <a href="index.html" class="link">Home</a>
+          </li>
+          <li>
+            <a href="myproject.html" class="link-active">My Project</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <a href="contact.html" class="contact-link">Contact Me</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="blog-form">
+        <form onsubmit="addBlog(event)" class="container-form">
+          <h1 class="section-title">ADD MY PROJECT</h1>
+          <div class="from-field">
+            <label for="input-project-title" class="form-label"
+              >Project Name</label
+            >
+            <input
+              id="input-project-title"
+              name="input-project-title"
+              class="form-input"
+              type="text"
+              required
+            />
+          </div>
+
+          <div class="column">
+            <div class="input-box">
+              <label for="input-blog-date-start" class="form-label"
+                >Start Date</label
+              >
+              <input
+                id="input-blog-date-start"
+                name="input-blog-date-start"
+                class="form-input-date"
+                type="date"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="input-blog-date-end" class="form-label"
+                >End Date</label
+              >
+              <input
+                id="input-blog-date-end"
+                name="input-blog-date-end"
+                class="form-input-date"
+                type="date"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="from-field">
+            <label class="form-label" for="input-project-content"
+              >Description</label
+            >
+            <textarea
+              id="input-project-content"
+              name="input-project-content"
+              class="form-input"
+              rows="8"
+              required
+            ></textarea>
+          </div>
+
+          <div class="checkbox_input" required>
+            <label class="form-label" for="input-blog-content"
+              >Technologies</label
+            >
+            <div class="column">
+              <div class="checkbox_input">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="Agular"
+                  name="Agular"
+                  value="Agular"
+                />
+                <label for="Agular">Agular</label><br />
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="nodeJs"
+                  name="nodeJs"
+                  value="NodeJs"
+                />
+                <label for="nodeJs"> Node Js</label><br />
+              </div>
+              <div class="checkbox_input">
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="react"
+                  name="react"
+                  value="React"
+                />
+                <label for="react"> React</label><br />
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  id="vueJs"
+                  name="vueJs"
+                  value="VueJs"
+                />
+                <label for="vueJs"> Vue Js</label><br />
+              </div>
+            </div>
+          </div>
+
+          <div class="from-field">
+            <label for="input-project-image" class="form-label"
+              >Upload Image</label
+            >
+            <div class="input-blog-image-group">
+              <label for="input-project-image">
+                <p class="input-p">choose</p>
+                <img src="assets/file.png" />
+              </label>
+              <input
+                id="input-project-image"
+                name="input-project-image"
+                class="form-input"
+                type="file"
+                placeholder="title"
+                hidden
+              />
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button class="from-submit-button" type="submit">submit</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- // list MyBlog -->
+
+      <section class="blog-container">
+        <h1 class="mypj">MY PROJECT</h1>
+        <div id="blogList" class="blog-list">
+          <div class="blog-list-item">
+            <div class="blog-image">
+              <img src="assets/blog-img.png" alt="blog-image" />
+            </div>
+            <div class="blog-content">
+              <div class="btn-group">
+                <button class="btn-edit">Edit Post</button>
+                <button class="btn-post">Post Blog</button>
+              </div>
+              <h1>
+                <a href="blog-detail.html" class="blog-item-title">
+                  Pasar Coding di Indonesia Masih Menjanjikan
+                </a>
+              </h1>
+              <div class="detail-blog-content">
+                12 Jul 2024 22:30 WIB | Karunia Leo G
+              </div>
+              <p class="blog-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                explicabo totam labore sit tempore, voluptate vitae nesciunt in
+                maiores rerum, vero veritatis numquam iure aut sunt nemo.
+              </p>
+              <p class="relative-time">Time</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="blog.js"></script>
+  </body>
+</html>
