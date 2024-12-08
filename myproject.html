@@ -6,6 +6,13 @@
     <title>My Project</title>
     <link rel="icon" href="assets/nm-bg.png" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <nav>
@@ -20,11 +27,14 @@
           <li>
             <a href="myproject.html" class="link-active">My Project</a>
           </li>
-        </ul>
+        </ul>    
       </div>
 
       <div class="navbar-right">
-        <a href="contact.html" class="contact-link">Contact Me</a>
+        <a href="contact.html" class="contact-link">contact me</a>
+      </div>
+      <div class="tombol"> 
+        <a href="contact.html"><i style="font-size: 30px;" class="fa-regular fa-address-book"></i></a>
       </div>
     </nav>
 
@@ -44,7 +54,6 @@
               required
             />
           </div>
-
           <div class="column">
             <div class="input-box">
               <label for="input-blog-date-start" class="form-label"
@@ -71,7 +80,6 @@
               />
             </div>
           </div>
-
           <div class="from-field">
             <label class="form-label" for="input-project-content"
               >Description</label
@@ -126,9 +134,9 @@
                 />
                 <label for="vueJs"> Vue Js</label><br />
               </div>
+              </div>
             </div>
           </div>
-
           <div class="from-field">
             <label for="input-project-image" class="form-label"
               >Upload Image</label
@@ -153,36 +161,37 @@
             <button class="from-submit-button" type="submit">submit</button>
           </div>
         </form>
+          <!-- list MyBlog -->
       </section>
-
-      <!-- // list MyBlog -->
-
+      <h1 class="titleMy">MY PROJECT</h1>
       <section class="blog-container">
-        <h1 class="mypj">MY PROJECT</h1>
         <div id="blogList" class="blog-list">
           <div class="blog-list-item">
             <div class="blog-image">
               <img src="assets/blog-img.png" alt="blog-image" />
             </div>
+            <h1>
+              <a href="blog-detail.html" class="blog-item-title">
+                Baswey App -2021-02-19
+              </a>
+              <p class="relative-time">Durasi : 3 Bulan</p>
+            </h1>
+            <div>
+              <p class="blog-text">
+            </div>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+            </p>
+            <div class="icone-f">
+              <i class="fa-brands fa-js"></i>
+              <i class="fa-brands fa-angular"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-vuejs"></i>
+            </div>
             <div class="blog-content">
               <div class="btn-group">
-                <button class="btn-edit">Edit Post</button>
-                <button class="btn-post">Post Blog</button>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delet">Delet</button>
               </div>
-              <h1>
-                <a href="blog-detail.html" class="blog-item-title">
-                  Pasar Coding di Indonesia Masih Menjanjikan
-                </a>
-              </h1>
-              <div class="detail-blog-content">
-                12 Jul 2024 22:30 WIB | Karunia Leo G
-              </div>
-              <p class="blog-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                explicabo totam labore sit tempore, voluptate vitae nesciunt in
-                maiores rerum, vero veritatis numquam iure aut sunt nemo.
-              </p>
-              <p class="relative-time">Time</p>
             </div>
           </div>
         </div>

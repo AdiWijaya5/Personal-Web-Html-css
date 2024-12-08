@@ -17,7 +17,7 @@ function addBlog(e) {
   let image = URL.createObjectURL(imageInput.files[0]);
 
   let blog = {
-    author: dateControl,
+    datestart: dateControl,
     teknologi: skills,
     title: title,
     content: content,
@@ -50,22 +50,27 @@ function renderBlog() {
               <img src="${blogs[i].image}" alt="blog-image" />
             </div>
             <div class="blog-content">
-              <div class="btn-group">
-                <button class="btn-edit">Edit Post</button>
-                <button class="btn-post">Post Blog</button>
-              </div>
               <h1>
                 <a href="blog-detail.html" class="blog-item-title">
-                ${blogs[i].title}
+                ${blogs[i].title} - ${blogs[i].datestart}
                 </a>
+                <p class="relative-time">${getRelativeTime(
+                  blogs[i].postedAt
+                )}</p>
               </h1>
-              <div class="detail-blog-content">
-              ${formattedDate} | ${blogs[i].author} | ${blogs[i].teknologi}
-              </div>
               <p class="blog-text">
               ${blogs[i].content}
               </p>
-              <p class="relative-time">${getRelativeTime(blogs[i].postedAt)}</p>
+              <div class="icone-f">
+              <i class="fa-brands fa-js"></i>
+              <i class="fa-brands fa-angular"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-vuejs"></i>
+            </div>
+              <div class="btn-group">
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delet">Delet</button>
+              </div>
             </div>
           </div>
     `;
@@ -74,32 +79,38 @@ function renderBlog() {
 
 function firstBlogContent() {
   return `
-          <div id="blogList" class="blog-list">
+      <section class="blog-container">
+        <div id="blogList" class="blog-list">
           <div class="blog-list-item">
             <div class="blog-image">
               <img src="assets/blog-img.png" alt="blog-image" />
             </div>
+            <h1>
+              <a href="blog-detail.html" class="blog-item-title">
+                Baswey App -2021-02-19
+              </a>
+              <p class="relative-time">Durasi : 3 Day</p>
+            </h1>
+            <div>
+              <p class="blog-text">
+            </div>
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+            </p>
+            <div class="icone-f">
+              <i class="fa-brands fa-js"></i>
+              <i class="fa-brands fa-angular"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-vuejs"></i>
+            </div>
             <div class="blog-content">
               <div class="btn-group">
-                <button class="btn-edit">Edit Post</button>
-                <button class="btn-post">Post Blog</button>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delet">Delet</button>
               </div>
-              <h1>
-                <a href="blog-detail.html" class="blog-item-title">
-                  Pasar Coding di Indonesia Masih Menjanjikan
-                </a>
-              </h1>
-              <div class="detail-blog-content">
-                12 Jul 2024 22:30 WIB | Karunia Leo G
               </div>
-              <p class="blog-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                explicabo totam labore sit tempore, voluptate vitae nesciunt in
-                maiores rerum, vero veritatis numquam iure aut sunt nemo.
-              </p>
-              <p class="relative-time>Time</p>
             </div>
           </div>
+        </div>
     `;
 }
 function formatDateToWIB(date) {
@@ -133,16 +144,19 @@ function formatDateToWIB(date) {
 
 function getRelativeTime(targetDate) {
   let now = new Date();
-  let diffInSeconds = Math.floor((now - targetDate) / 1000); // satuan dari ms ke detik
-
+  let diffInSeconds = Math.floor((now - targetDate) / 1000); 
   console.log(diffInSeconds);
 
   if (diffInSeconds < 60) {
-    return `${diffInSeconds} second${diffInSeconds > 1 ? "s" : ""} ago`;
+    return `Durasi : ${diffInSeconds} second${
+      diffInSeconds > 1 ? "s" : ""
+    } ago`;
   }
 
   let diffInMinutes = Math.floor(diffInSeconds / 60);
   if (diffInMinutes < 60) {
-    return `${diffInMinutes} minute${diffInMinutes > 1 ? "s" : ""} ago`;
+    return `Durasi : ${diffInMinutes} minute${
+      diffInMinutes > 1 ? "s" : ""
+    } ago`;
   }
 }
