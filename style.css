@@ -141,33 +141,64 @@ nav a {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.text-h3 {
+  padding: 10px 0;
+}
 .card-btn-link {
   display: flex;
   padding: 10px;
   font-family: "Poppins";
   align-items: center;
 }
-.card-btn-link a {
-  text-decoration: none;
+.downlCv {
   color: black;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 200;
 }
 .button {
   margin: 10px;
   padding: 7px 32px;
-  color: rgb(0, 0, 0);
+  color: white;
   text-align: center;
   text-decoration: none;
   font-family: "Poppins";
   display: inline-block;
   font-size: 16px;
-  background-color: #ffffff;
+  background-color: #4276d8;
   border: none;
   border-radius: 15px;
 }
+.button:hover {
+  background: orangered;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 h3 {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins";
 }
 h5 {
   text-align: center;

@@ -69,7 +69,7 @@ function renderBlog() {
             </div>
               <div class="btn-group">
                 <button class="btn-edit">Edit</button>
-                <button class="btn-delet">Delet</button>
+                <button class="btn-delet">Delete</button>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ function firstBlogContent() {
             <div class="blog-content">
               <div class="btn-group">
                 <button class="btn-edit">Edit</button>
-                <button class="btn-delet">Delet</button>
+                <button class="btn-delet">Delete</button>
               </div>
               </div>
             </div>
