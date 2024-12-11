@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 
 /* NavBar Style */
 
-nav {
+.nav-container {
   background-color: #ff9874;
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,7 @@ nav {
 }
 nav a {
   font-size: 20px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   text-decoration: none;
 }
 
@@ -33,39 +33,50 @@ nav a {
 .navbar-right {
   display: inline-block;
 }
-.tombol {
-  text-decoration: none;
+
+.hamburger-container {
   display: none;
-  font-size: 20px;
 }
-.tombol:hover {
-  cursor: pointer;
+
+.hamburger-button {
+  font-size: 24px;
 }
-@media screen and (max-width: 768px) {
+
+.hamburger-menu-list {
+  background-color: #ff9874;
+  list-style: none;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.show-menu {
+  display: none;
+}
+
+.hide-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
   .navbar-right {
     display: none;
   }
-
-  .navbar-right.aktif {
-    display: inline-block;
-    position: absolute;
-    top: 64px;
-    background: #212121;
-    padding: 10px 20px;
-    right: 0;
-    left: 0;
-  }
-
-  .navbar-right.aktif a {
-    padding: 10px;
-    display: inline-block !important;
-  }
-
-  .tombol {
+  .hamburger-container {
     display: block;
   }
-}
 
+  .show-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 .web-logo {
   width: 60px;
 }
@@ -110,7 +121,7 @@ nav a {
   flex: 50%;
 }
 .card-title h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ea1d6f;
 }
 .card-title p {
@@ -147,13 +158,13 @@ nav a {
 .card-btn-link {
   display: flex;
   padding: 10px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   align-items: center;
 }
 .downlCv {
   color: black;
   text-decoration: none;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 200;
 }
 .button {
@@ -162,7 +173,7 @@ nav a {
   color: white;
   text-align: center;
   text-decoration: none;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   display: inline-block;
   font-size: 16px;
   background-color: #4276d8;
@@ -180,7 +191,7 @@ nav a {
 }
 
 .button span:after {
-  content: "\00bb";
+  content: '\00bb';
   position: absolute;
   opacity: 0;
   top: 0;
@@ -198,11 +209,11 @@ nav a {
 }
 h3 {
   text-align: center;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 h5 {
   text-align: center;
-  font-family: Monospace, "Courier New", Courier, monospace;
+  font-family: Monospace, 'Courier New', Courier, monospace;
 }
 
 .icons {
@@ -261,14 +272,14 @@ h5 {
 }
 
 .contact-froms h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ea1d6f;
   text-align: center;
 }
 .from-field {
   display: flex;
   margin-top: 10px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   flex-direction: column;
 }
 .from-field-select {
@@ -326,7 +337,7 @@ textarea {
 
 .section-title {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ea1d6f;
 }
 .blog-form {
@@ -375,13 +386,13 @@ textarea {
 .form-input-date {
   width: 100%;
   height: 40px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 5px;
 }
 
-input[type="date"]:focus:invalid + span:after {
+input[type='date']:focus:invalid + span:after {
   display: none;
 }
 
@@ -423,12 +434,12 @@ input:not(:focus):invalid {
 .input-box {
   width: 100%;
   margin-top: 10px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .checkbox_input {
   width: 100%;
   margin-top: 10px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .button-group {
   text-align: right;
@@ -474,7 +485,7 @@ hr {
 .titleMy {
   margin: 10px 0;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ea1d6f;
 }
 
@@ -491,7 +502,7 @@ hr {
 .btn-edit {
   padding: 8px 60px;
   color: rgb(255, 255, 255);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   background-color: #000000;
   border: none;
@@ -502,7 +513,7 @@ hr {
 .btn-delet {
   padding: 8px 60px;
   color: rgb(255, 255, 255);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   background-color: #ce2c2c;
   border: none;
